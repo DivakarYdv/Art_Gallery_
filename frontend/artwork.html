@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artwork — Divakar</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Divakar<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+      <button class="nav-cart-btn" onclick="window.location.href='cart.html'" aria-label="View cart">
+        Cart
+        <span class="cart-count" id="cart-count" aria-live="polite"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Artwork Detail -->
+  <main class="artwork-detail container">
+    <a href="index.html" class="back-link" aria-label="Return to gallery">
+      ← Back to Gallery
+    </a>
+
+    <!-- Content injected by artwork.js -->
+    <div id="artwork-content">
+      <!-- Skeleton while loading -->
+      <div class="artwork-detail-grid">
+        <div class="skeleton">
+          <div class="skeleton-img" style="aspect-ratio:3/4"></div>
+        </div>
+        <div class="artwork-detail-info">
+          <div class="skeleton-line" style="width:30%;margin-bottom:1rem"></div>
+          <div class="skeleton-line" style="width:70%;height:2rem;margin-bottom:0.5rem"></div>
+          <div class="skeleton-line" style="width:40%;margin-bottom:2rem"></div>
+          <div class="skeleton-line" style="width:100%;margin-bottom:0.5rem"></div>
+          <div class="skeleton-line" style="width:100%;margin-bottom:0.5rem"></div>
+          <div class="skeleton-line" style="width:80%"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Divakar<span>.</span></span>
+      <span class="footer-copy">© 2026 Divakar Gallery. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/artwork.js"></script>
+</body>
+</html>

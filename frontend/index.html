@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIVAKAR — Contemporary Art Gallery</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">DIVAKAR<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Gallery</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+      <button class="nav-cart-btn" onclick="window.location.href='cart.html'" aria-label="View cart">
+        Cart
+        <span class="cart-count" id="cart-count" aria-live="polite"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Gallery introduction">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Current Collection — 2026</p>
+      <h1 class="hero-title">Original works by <em>emerging artists</em></h1>
+      <p class="hero-subtitle">
+        Each piece is a singular object. No prints, no editions —
+        only the original work, available to one collector.
+      </p>
+      <div class="hero-stats" aria-label="Gallery statistics">
+        <div>
+          <div class="hero-stat-number" id="stat-count">—</div>
+          <div class="hero-stat-label">Works available</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">8</div>
+          <div class="hero-stat-label">Artists</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">2024</div>
+          <div class="hero-stat-label">Season</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <main class="gallery-section">
+    <div class="container">
+      <div class="gallery-header">
+        <h2 class="gallery-title">All works</h2>
+        <span class="gallery-count" id="gallery-count" aria-live="polite"></span>
+      </div>
+      <div class="gallery-grid" id="gallery-grid" role="list" aria-label="Artwork gallery">
+        <!-- Skeleton loaders shown while fetching -->
+        <div class="skeleton" role="listitem" aria-label="Loading artwork">
+          <div class="skeleton-img"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line" style="width:60%"></div>
+            <div class="skeleton-line" style="width:40%"></div>
+          </div>
+        </div>
+        <div class="skeleton" role="listitem" aria-label="Loading artwork">
+          <div class="skeleton-img"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line" style="width:55%"></div>
+            <div class="skeleton-line" style="width:35%"></div>
+          </div>
+        </div>
+        <div class="skeleton" role="listitem" aria-label="Loading artwork">
+          <div class="skeleton-img"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line" style="width:70%"></div>
+            <div class="skeleton-line" style="width:45%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">DIVAKAR<span>.</span></span>
+      <span class="footer-copy">© 2026 DIVAKAR Gallery. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/cart.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>
